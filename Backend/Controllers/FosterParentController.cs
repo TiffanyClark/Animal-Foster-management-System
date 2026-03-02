@@ -35,6 +35,16 @@ namespace Backend.Controllers
       return Ok(fosterParentTemp);
     }
 
+    [HttpGet("status")]
+    public ActionResult GetPendingStatus()
+    {
+      var status = _unitOfWork.FosterParentRepository
+          .Get(filter: fosterparent => fosterparent.Status == "Pending")
+          .Count();
+
+      return Ok( new { status });
+    }
+
     [HttpPost]
     public ActionResult Post([FromBody] PostFosterParentDto value)
     {
