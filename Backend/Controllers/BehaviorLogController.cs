@@ -96,14 +96,24 @@ namespace Backend.Controllers
       var updateBehaviorLog = _unitOfWork.BehaviorLogRepository.GetByID(id);
       if (updateBehaviorLog == null)
       {
-        return BadRequest();
+        return NotFound();
       }
 
       updateBehaviorLog.Resolved = value.Resolved;
 
       _unitOfWork.BehaviorLogRepository.Update(updateBehaviorLog);
       _unitOfWork.Save();
-      return Ok(updateBehaviorLog);
+      var updatedBehaviorLogDto = new BehaviorLogDto()
+      {
+        Id = updateBehaviorLog.Id,
+        AnimalId = updateBehaviorLog.AnimalId,
+        ReportedByUserId = updateBehaviorLog.ReportedByUserId,
+        BehaviorType = updateBehaviorLog.BehaviorType,
+        Notes = updateBehaviorLog.Notes,
+        DateReported = updateBehaviorLog.DateReported,
+        Resolved = updateBehaviorLog.Resolved
+      };
+      return Ok(updatedBehaviorLogDto);
     }
     
     // DELETE
