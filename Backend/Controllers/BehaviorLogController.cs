@@ -108,7 +108,7 @@ namespace Backend.Controllers
     
     // DELETE
 
-        [HttpDelete("{id}")]
+    [HttpDelete("{id}")]
     public ActionResult Delete(int id)
     {
       var behaviorLogDb = _unitOfWork.BehaviorLogRepository.GetByID(id);
