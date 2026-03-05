@@ -97,12 +97,24 @@ namespace Backend.Controllers
                     OrderId = orderitemDto.OrderId,
                     ProductId = orderitemDto.ProductId,
                     Quantity = orderitemDto.Quantity,
-                    
+
                 };
 
                 _unitOfWork.OrderItemRepository.Insert(orderitem);
+
+                // Decrease inventory quantity when an item is ordered
+                var inventoryItem = _unitOfWork.InventoryRepository
+                    .Get(i => i.ProductId == orderitemDto.ProductId)
+                    .FirstOrDefault();
+
+                if (inventoryItem != null && orderitemDto.Quantity.HasValue)
+                {
+                    inventoryItem.QuantityOnHand = (inventoryItem.QuantityOnHand ?? 0) - orderitemDto.Quantity.Value;
+                    inventoryItem.LastUpdated = DateTime.UtcNow;
+                    _unitOfWork.InventoryRepository.Update(inventoryItem);
+                }
+
                 _unitOfWork.Save();
-                _unitOfWork.Dispose();
                 return Ok("orderitem inserted successfully.");
 
             }

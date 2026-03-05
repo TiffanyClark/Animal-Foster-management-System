@@ -117,8 +117,9 @@ namespace Backend.Controllers
 
                 _unitOfWork.OrderRepository.Insert(order);
                 _unitOfWork.Save();
-                _unitOfWork.Dispose();
-                return Ok("order inserted successfully.");
+
+                // Return the created order with its ID so the frontend can use it
+                return Ok(new { id = order.Id });
 
             }
             catch (Exception)
