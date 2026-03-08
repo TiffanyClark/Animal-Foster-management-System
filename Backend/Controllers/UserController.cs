@@ -1,8 +1,9 @@
-
+﻿
 using Backend.Data;
 using Backend.Data.Models;
 using Backend.Dtos;
 using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace Backend.Controllers
 {
@@ -24,7 +25,7 @@ namespace Backend.Controllers
    {
             var userTemp = _unitOfWork.UserRepository.Get();
             return userTemp;
-        }     
+        }
 
         /*
          {
@@ -45,6 +46,50 @@ namespace Backend.Controllers
             "orders": []
         }
          */
+
+        [HttpGet("email/{email}")]
+        public ActionResult GetEmail(string email)
+        {
+            var userTemp = _unitOfWork.UserRepository.Get(u => u.Email == email);
+
+            if (!userTemp.Any())
+            {
+                return NotFound();
+            }
+            var user = userTemp.FirstOrDefault();           
+            var userDto = new UsersDto
+            {
+                Id = user!.Id,
+                FirstName = user.FirstName,
+                LastName = user.LastName,
+                EmployeeId = user.EmployeeId,
+                Phone = user.PhoneNumber,
+                Email = user.Email,
+                Address = user.Address,
+                City = user.City,
+                State = user.State,
+                Zip = user.Zip,
+                CreatedOn = user.CreatedOn,
+                UpdatedOn = user.UpdatedOn
+            };
+
+            var fosterParents = _unitOfWork.FosterParentRepository.Get(f => f.UserId == user!.Id);
+            if (fosterParents.Any())
+            {
+                var fosterParent = fosterParents.FirstOrDefault();
+                userDto.FosterParent = new FosterParentGetDto { 
+                    ApprovedDate = fosterParent!.ApprovedDate, 
+                    FosterHomeId = fosterParent.FosterHomeId, 
+                    Id = fosterParent.Id, 
+                    Status = fosterParent.Status, 
+                    UserId = fosterParent.UserId 
+                };
+
+            }
+
+            return Ok(userDto);
+        }
+
         [HttpGet("{id}")]
         public ActionResult Get(int id)
         {
@@ -57,6 +102,7 @@ namespace Backend.Controllers
 
             return Ok(userTemp);
         }
+
 
         [HttpPost]
         //http://localhost:5282/api/User
