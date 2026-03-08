@@ -6,7 +6,7 @@ import {
 } from '@/components/ui/sidebar';
 import { AppSidebar } from '@/components/shared/SideBar';
 import type { NavItem } from '@/components/shared/SideBar';
-import { Box, LayoutDashboard, PawPrint, Users, Home, ShoppingCart } from 'lucide-react';
+import { Box, LayoutDashboard, PawPrint, Users, Home, UserPlus, ShoppingCart } from 'lucide-react';
 import { UserAvatar } from '@/components/shared/UserAvatar';
 
 const employeeNavItems: NavItem[] = [
@@ -15,6 +15,7 @@ const employeeNavItems: NavItem[] = [
   { name: 'Foster Homes', href:'/employee-foster-homes-page', icon: Home},
   { name: 'Inventory', href: '/employee-inventory-page', icon: Box },
   { name: 'Pets', href: '/employee-pets-page', icon: PawPrint },
+  { name: 'Registration', href: '/employee-registration-page', icon: UserPlus },
   { name: 'Orders', href: '/employee-orders-page', icon: ShoppingCart },
 ];
 
