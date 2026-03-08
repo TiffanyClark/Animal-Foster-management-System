@@ -21,7 +21,6 @@ import AuthLayout from './Layouts/AuthLayout';
 import { TempLogin } from './components/shared/TempLogin';
 import { supabaseClient } from './lib/supabaseclient';
 import EmployeeRegistrationPage from './pages/employee/EmployeeRegistrationPage';
-import FosterLoginPage from './pages/FosterLoginPage';
 import EmployeeOrders from './pages/employee/EmployeeOrders';
 
 function BasicLayout() {
@@ -33,6 +32,8 @@ function BasicLayout() {
     </>
   );
 }
+
+
 
 export default function App() {
   const { setUser } = useGlobalContext();
@@ -67,6 +68,8 @@ export default function App() {
       </Route>
       <Route element={<AuthLayout usersRole="employee" />}>
         <Route path="/employee-page" element={<EmployeeDashboard />} />
+        <Route path="/employee-registration-page" element={<EmployeeRegistrationPage />} />
+        <Route path="/employee-orders-page" element={<EmployeeOrders />} />
         <Route
           path="/employee-foster-parents-page"
           element={<EmployeeFosterParents />}
