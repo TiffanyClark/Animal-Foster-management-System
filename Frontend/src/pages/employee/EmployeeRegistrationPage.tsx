@@ -1,9 +1,9 @@
-import EmployeeRegistration from '@/components/employee/registration/EmployeeRegistration';
+import { LoginCard } from '@/components/shared/loginCard';
 
 export default function EmployeeRegistrationPage() {
   return (
-    <div>
-      <EmployeeRegistration />
+    <div className="flex flex-1 items-center justify-center p-6">
+      <LoginCard />
     </div>
   );
 }
