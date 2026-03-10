@@ -163,7 +163,7 @@ const RegistrationForm = ({ variant, title, description }: RegistrationFormProps
           setUser(userData);
           form.reset();
           toast.success(`${data.firstname} ${data.lastname} successfully registered!`);
-          navigate('/foster-page');
+          navigate('/login');
           return;
         }
       }
