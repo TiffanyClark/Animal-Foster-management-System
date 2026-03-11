@@ -50,27 +50,69 @@ A web-based management interface that allows employees to view, create, edit, an
 
 ## 🛠️ Setup Instructions
 
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/callmecelsius/2026-CohortTeam-Deja-Kelvin.git
-   ```
-2. Open project in local folder.
-3. cd frontend
-4. Install npm
-5. Enter npm run dev
+1## Running the Front End
+
+Follow these steps to run the front end locally using npm.
+
+### 1. Open your terminal
+
+Open **Git Bash**, **PowerShell**, **Command Prompt**, or the terminal in **VS Code**.
+
+### 2. Go to the front-end project folder
+
+Use the `cd` command to move into the project directory.
+
+```bash
+cd your-project-folder
+### 3. Install Dependencies
+npm install
    .
 
--
+   4. Start the development server
+   npm run dev
+
+   5. Open the app in your browser
+   http://localhost:5173/
 
 ## Team Members
 
-| Name     | Email                         | GitHub                                              | LinkedIn                                                                                              |
-| -------- | ----------------------------- | --------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
-| Dennis   | dennisgarcia.appdev@gmail.com | [dgarcia-appdev](https://github.com/dgarcia-appdev) | [dgarcia-appdev](https://www.linkedin.com/in/dgarcia-appdev/Garcia/)                                  |
-| Kelvin   | kelnguyen9@gmail.com          | [callmecelsius](https://github.com/callmecelsius)   | [kelvincelsius](https://www.linkedin.com/in/kelvincelsius/)                                           |
-| Tiffany  | tiffanylclark85@yahoo.com     | [TiffanyClark](https://github.com/TiffanyClark)     | [tiffanyclark09](https://www.linkedin.com/in/tiffanyclark09/)                                         |
-| Benjamin | b.keller2890@gmail.com        | [bkeller2890](https://github.com/bkeller2890)       | [benjamin-keller-computer-scientist](https://www.linkedin.com/in/benjamin-keller-computer-scientist/) |
-| Claudia  | claudiamora0917@gmail.com     | [CV17-09](https://github.com/CV17-09)               | [claudia-v-dominguez](https://www.linkedin.com/in/claudia-v-dominguez-1b5802176)                      |
-| Nate     | nathan.levi8@gmail.com        | [NateLevi](https://github.com/NateLevi)             | [natelevi](https://www.linkedin.com/in/natelevi/)                                                     |
-| Nathan   | nathannguyen555@gmail.com     | [natenguyen100](https://github.com/natenguyen100)   | [nathannguyen1000](https://www.linkedin.com/in/nathannguyen1000/)                                     |
-| Archi    | archi.sahu95@gmail.com        | [Archi23Sahu](https://github.com/Archi23Sahu)       | [archisahu](https://www.linkedin.com/in/archisahu/)                                                   |
+1. Dennis
+   Email: dennisgarcia.appdev@gmail.com
+   GitHub: https://github.com/dgarcia-appdev
+   LinkedIn: https://www.linkedin.com/in/dgarcia-appdev/Garcia/
+
+2. Kelvin
+   Email: kelnguyen9@gmail.com
+   GitHub: https://github.com/callmecelsius
+   LinkedIn: https://www.linkedin.com/in/kelvincelsius/
+
+3. Tiffany
+   Email: scooter3229@gmail.com
+   GitHub: https://github.com/TiffanyClark
+   LinkedIn: https://www.linkedin.com/in/tiffanyclark09/
+
+4. Benjamin
+   Email: b.keller2890@gmail.com
+   GitHub: https://github.com/bkeller2890
+   LinkedIn: https://www.linkedin.com/in/benjamin-keller-computer-scientist/
+
+5. Claudia
+   Email: claudiamora0917@gmail.com
+   GitHub: https://github.com/CV17-09
+   LinkedIn: https://www.linkedin.com/in/claudia-v-dominguez-1b5802176
+
+6. Nate
+   Email: nathan.levi8@gmail.com
+   GitHub: https://github.com/NateLevi
+   LinkedIn: https://www.linkedin.com/in/natelevi/
+
+7. Nathan
+   Email: nathannguyen555@gmail.com
+   GitHub: https://github.com/natenguyen100
+   LinkedIn: https://www.linkedin.com/in/nathannguyen1000/
+
+8. Archi
+   Email: archi.sahu95@gmail.com
+   GitHub: https://github.com/Archi23Sahu
+   LinkedIn: https://www.linkedin.com/in/archisahu/
+```
