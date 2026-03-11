@@ -55,8 +55,8 @@ A web-based management interface that allows employees to view, create, edit, an
    git clone https://github.com/callmecelsius/2026-CohortTeam-Deja-Kelvin.git
    ```
 2. Open project in local folder.
-3. cd frontend 
-4. Install npm 
+3. cd frontend
+4. Install npm
 5. Enter npm run dev
    .
 
