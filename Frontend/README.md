@@ -6,7 +6,7 @@ A web-based management interface that allows employees to view, create, edit, an
 
 ### About the Project
 
-This project was developed during a 6-week cohort led by two professional software developers. Out of 600+ applicants, a selected team collaborated to build a project that solves real-world business problems. Participants gained practical experience working in a team environment while receiving mentorship from industry professionals.
+This project was developed during a 6-week cohor(Feb-March 2026). A team of developers who created Pet Foster Project where users can adopt and foster animals. Users have the option to buy products for their pets. Employees have the option approve pet requests for pet parents
 
 ---
 
