@@ -48,8 +48,7 @@ export function FosterParentsTable() {
     setIsModalOpen(true);
   };
 
-  const handleDelete = async () => {
-  };
+ 
 
   const handleStatus = async (row: FosterData, status: string) => {
     if (!row?.fosterParentId) return;
@@ -104,12 +103,7 @@ export function FosterParentsTable() {
               icon: <Pencil className="mr-2 h-4 w-4" />,
               onClick: () => handleEdit(row),
             },
-            {
-              label: 'Delete',
-              icon: <Trash2 className="mr-2 h-4 w-4" />,
-              onClick: () => handleDelete(),
-              className: 'text-red-600',
-            },
+            
             {
               label: 'Approved',
               icon: <CheckCircle className="mr-2 h-4 w-4" />,
