@@ -79,7 +79,7 @@ http://localhost:5173/
 
 
 ### Tiffany
-- Email: scooter3229@gmail.com
+- Email: tiffanylclark85@yahoo.com
 - GitHub: https://github.com/TiffanyClark
 - LinkedIn: https://www.linkedin.com/in/tiffanyclark09/
 
